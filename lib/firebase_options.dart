@@ -21,15 +21,9 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for android - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return android;
       case TargetPlatform.iOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for ios - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return ios;
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
@@ -61,5 +55,25 @@ class DefaultFirebaseOptions {
     databaseURL: 'https://mycar-2ab4d-default-rtdb.firebaseio.com',
     storageBucket: 'mycar-2ab4d.appspot.com',
     measurementId: 'G-NK7CZ09JL3',
+  );
+
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyBtA5WIz_6BwhoQCHXHaG0TtjHOew1z-Ow',
+    appId: '1:193273115262:android:024a9a1f728457e4315e2f',
+    messagingSenderId: '193273115262',
+    projectId: 'mycar-2ab4d',
+    databaseURL: 'https://mycar-2ab4d-default-rtdb.firebaseio.com',
+    storageBucket: 'mycar-2ab4d.appspot.com',
+  );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyDvpy_Zt79MRyFti263C6N-VIHAo3s1qrI',
+    appId: '1:193273115262:ios:bae6f63367dba6b0315e2f',
+    messagingSenderId: '193273115262',
+    projectId: 'mycar-2ab4d',
+    databaseURL: 'https://mycar-2ab4d-default-rtdb.firebaseio.com',
+    storageBucket: 'mycar-2ab4d.appspot.com',
+    iosClientId: '193273115262-flpog4jmpsnte6jiqlkempifnkbs5du0.apps.googleusercontent.com',
+    iosBundleId: 'com.pdp.mobileBroFoodAdminPanel',
   );
 }

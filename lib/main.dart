@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return  MaterialApp(
-        debugShowMaterialGrid:false,
+      debugShowCheckedModeBanner: false,
       color: Colors.orange,
       theme: ThemeData(
         appBarTheme: AppBarTheme(
