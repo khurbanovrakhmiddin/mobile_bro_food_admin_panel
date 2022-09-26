@@ -5,6 +5,7 @@ import 'package:mobile_bro_food_admin_panel/pages/home/home_page.dart';
 import 'package:mobile_bro_food_admin_panel/pages/singin/signin_page.dart';
 import 'package:mobile_bro_food_admin_panel/repository/auth_repostory.dart';
 import 'package:mobile_bro_food_admin_panel/service/sd_service.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 import 'firebase_options.dart';
 
 void main() async{
@@ -48,8 +49,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-
     return  MaterialApp(
+      builder: (context, child) => ResponsiveWrapper.builder(
+          child,
+          maxWidth: MediaQuery.of(context).size.width,
+          minWidth: 480,
+          background: Container(color: Color(0xFFF5F5F5))),
       debugShowCheckedModeBanner: false,
       color: Colors.orange,
       theme: ThemeData(
