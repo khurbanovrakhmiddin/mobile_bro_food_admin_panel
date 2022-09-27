@@ -15,8 +15,7 @@ void main() async{
     options: DefaultFirebaseOptions.currentPlatform,
    );
  String data = await DBService.readData(key: DBService.key);
-  print('data');
-  print(data);
+
   runApp( MyApp());
 }
 
@@ -52,7 +51,7 @@ class MyApp extends StatelessWidget {
     return  MaterialApp(
       builder: (context, child) => ResponsiveWrapper.builder(
           child,
-          maxWidth: MediaQuery.of(context).size.width,
+          maxWidth: 1600,
           minWidth: 480,
           background: Container(color: Color(0xFFF5F5F5))),
       debugShowCheckedModeBanner: false,
