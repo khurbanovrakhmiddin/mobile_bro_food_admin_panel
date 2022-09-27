@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
             DBService.deleteData(key: DBService.key);
             return const SignPage();
           }
-        });
+        },);
   }
    MyApp({super.key});
 
@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
           child,
           maxWidth: 1600,
           minWidth: 480,
-          background: Container(color: Color(0xFFF5F5F5))),
+          background: Container(color: Color(0xFFEEDA9F))),
       debugShowCheckedModeBanner: false,
       color: Colors.orange,
       theme: ThemeData(

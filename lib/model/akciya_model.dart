@@ -27,7 +27,7 @@ class AkciyaModel {
     akciyaData = json['akciyaData'];
 
     food = Foods(name:json['food']!.name,image: json['food'].image,
-       price: json['food'].price,type: json['food'].type,
+       price: json['food'].price,type: json['food'].type,have: json['have'].type,
         about:json['food']
             .about);
   }
