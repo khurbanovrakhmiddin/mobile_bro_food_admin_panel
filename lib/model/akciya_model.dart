@@ -29,7 +29,7 @@ class AkciyaModel {
     food = Foods(name:json['food']!.name,image: json['food'].image,
        price: json['food'].price,type: json['food'].type,have: json['have'].type,
         about:json['food']
-            .about);
+            .about, id: json["id"]);
   }
 
   Map<String, dynamic> toJson() {

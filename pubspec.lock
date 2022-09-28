@@ -332,7 +332,7 @@ packages:
     source: hosted
     version: "0.2.2"
   graphql:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: graphql
       url: "https://pub.dartlang.org"

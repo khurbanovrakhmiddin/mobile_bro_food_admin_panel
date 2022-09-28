@@ -1,12 +1,15 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:mobile_bro_food_admin_panel/pages/home/home_page.dart';
 import 'package:mobile_bro_food_admin_panel/pages/singin/signin_page.dart';
 import 'package:mobile_bro_food_admin_panel/repository/auth_repostory.dart';
 import 'package:mobile_bro_food_admin_panel/service/sd_service.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'firebase_options.dart';
+import 'repository/graphql_repost.dart';
+
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,7 +19,7 @@ void main() async{
    );
  String data = await DBService.readData(key: DBService.key);
 
-  runApp( MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
