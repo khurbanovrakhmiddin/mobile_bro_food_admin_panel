@@ -2,10 +2,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
+import 'package:mobile_bro_food_admin_panel/pages/home/controller/home_controller.dart';
 import 'package:mobile_bro_food_admin_panel/pages/home/home_page.dart';
 import 'package:mobile_bro_food_admin_panel/pages/singin/signin_page.dart';
 import 'package:mobile_bro_food_admin_panel/repository/auth_repostory.dart';
 import 'package:mobile_bro_food_admin_panel/service/sd_service.dart';
+import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'firebase_options.dart';
 import 'repository/graphql_repost.dart';
@@ -39,7 +41,10 @@ class MyApp extends StatelessWidget {
           if (snapshot.hasData) {
             DBService.storeData( value: snapshot.data!.uid.toString
               (),);
-            return const HomePage();
+            return   ChangeNotifierProvider<HomeProvider>(
+              create: (context) => HomeProvider(),
+              child: const HomePage(),
+            );
           } else {
             DBService.deleteData(key: DBService.key);
             return const SignPage();
