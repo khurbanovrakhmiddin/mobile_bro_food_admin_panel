@@ -57,11 +57,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
-      builder: (context, child) => ResponsiveWrapper.builder(
-          child,
-          maxWidth: 1600,
-          minWidth: 480,
-          background: Container(color: Color(0xFFEEDA9F))),
       debugShowCheckedModeBanner: false,
       color: Colors.orange,
       theme: ThemeData(
